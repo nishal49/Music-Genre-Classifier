@@ -67,7 +67,7 @@ def nearestClass(neighbors):
 results=defaultdict(int)
 
 i=1
-for folder in os.listdir("C:/Users/Lenovo/Desktop/genres_original"):
+for folder in os.listdir("genres_original"):
     results[i]=folder
     i+=1
 
