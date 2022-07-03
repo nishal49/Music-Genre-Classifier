@@ -1,3 +1,4 @@
 scipy==1.7.3
 numpy==1.21.5
 streamlit==1.10.0
+python_speech_features==0.6
