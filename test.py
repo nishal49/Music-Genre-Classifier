@@ -78,11 +78,11 @@ if uploaded_file is not None:
   
 
     (rate,sig)=wav.read(uploaded_file)
-mfcc_feat=mfcc(sig,rate,winlen=0.020,appendEnergy=False)
-covariance = np.cov(np.matrix.transpose(mfcc_feat))
-mean_matrix = mfcc_feat.mean(0)
-feature=(mean_matrix,covariance,0)
+    mfcc_feat=mfcc(sig,rate,winlen=0.020,appendEnergy=False)
+    covariance = np.cov(np.matrix.transpose(mfcc_feat))
+    mean_matrix = mfcc_feat.mean(0)
+    feature=(mean_matrix,covariance,0)
 
-pred=nearestClass(getNeighbors(dataset ,feature , 5))
+    pred=nearestClass(getNeighbors(dataset ,feature , 5))
 
-st.text(results[pred])
+    st.text(results[pred])
